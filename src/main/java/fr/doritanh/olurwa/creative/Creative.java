@@ -7,14 +7,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 import fr.doritanh.olurwa.creative.listeners.BungeeMessageListener;
 import fr.doritanh.olurwa.creative.listeners.CoreMessageListener;
 import fr.doritanh.olurwa.creative.listeners.PlayerListener;
-import fr.doritanh.olurwa.creative.tablist.TabList;
 
 public class Creative extends JavaPlugin {
 
 	private static Creative instance;
 
 	private World world;
-	private TabList tablist;
 
 	public Creative() {
 		instance = this;
@@ -35,8 +33,6 @@ public class Creative extends JavaPlugin {
 				this.world = w;
 			}
 		}
-
-		this.tablist = new TabList();
 	}
 
 	@Override
@@ -49,9 +45,5 @@ public class Creative extends JavaPlugin {
 
 	public World getWorld() {
 		return this.world;
-	}
-
-	public TabList getTabList() {
-		return this.tablist;
 	}
 }
